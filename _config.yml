@@ -1,0 +1,57 @@
+# Site Settings
+title: ReviewFiber
+description: "Your trusted source for honest reviews"
+url: "https://snakeo.github.io"
+baseurl: "/reviewfiber"
+repository: "snakeo/reviewfiber"
+
+# Theme (MUST use remote_theme for GitHub Pages)
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin: "default"  # Options: air, aqua, contrast, dark, default, dirt, mint, neon, plum, sunrise
+
+# Site Author
+author:
+  name: "ReviewFiber"
+  bio: "Honest reviews you can trust"
+  # avatar: "/assets/images/avatar.png"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/snakeo"
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+
+# Pagination
+paginate: 10
+paginate_path: /page:num/
+
+# Outputting
+permalink: /:categories/:title/
+timezone: America/Chicago
+
+# Reading Files
+include:
+  - _pages
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
