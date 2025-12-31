@@ -1,0 +1,75 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+/* ==========================================================================
+   CUSTOM SKIN / VARIABLE OVERRIDES
+   Define these BEFORE importing the theme
+   ========================================================================== */
+
+/* Primary Colors */
+$primary-color: #6f42c1 !default;        /* Purple - change to your brand color */
+$link-color: #6f42c1 !default;
+
+/* Background & Text */
+$background-color: #fff !default;
+$text-color: #333 !default;
+$border-color: #e5e5e5 !default;
+
+/* Masthead / Header */
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $primary-color !default;
+
+/* Footer */
+$footer-background-color: #1a1a1a !default;
+
+/* Code Blocks */
+$code-background-color: #f5f5f5 !default;
+$code-background-color-dark: #263238 !default;
+
+/* Typography */
+// $serif: Georgia, Times, serif !default;
+// $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", sans-serif !default;
+// $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+
+/* Font Sizes */
+// $type-size-1: 2.441em !default;
+// $type-size-2: 1.953em !default;
+// $type-size-3: 1.563em !default;
+
+/* Syntax Highlighting (options: base16-dark, base16-solarized-light, contrast, dark, dirt, dracula, neon, plum, sunrise) */
+// $base16-scheme: "dracula" !default;
+
+/* ==========================================================================
+   IMPORT MINIMAL MISTAKES THEME
+   ========================================================================== */
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* ==========================================================================
+   CUSTOM CSS OVERRIDES
+   Add your custom styles AFTER importing the theme
+   ========================================================================== */
+
+/* Example: Custom homepage hero styling */
+.page__hero--overlay {
+  // background-image: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 20%) 100%);
+}
+
+/* Example: Custom button styling */
+.btn--primary {
+  // background-color: $primary-color;
+  // &:hover {
+  //   background-color: darken($primary-color, 10%);
+  // }
+}
+
+/* Example: Custom card/archive styling */
+.archive__item-title {
+  // font-weight: 600;
+}
+
+/* Add your custom styles below */
