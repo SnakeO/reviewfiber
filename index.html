@@ -3,108 +3,129 @@ layout: home
 author_profile: false
 classes: wide
 title: "ReviewFiber"
-header:
-  overlay_color: "#667eea"
-  overlay_filter: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
-excerpt: "Honest reviews you can trust. Make smarter decisions with in-depth, unbiased product analysis."
 ---
 
-<div class="section section--white">
-  <div class="container">
-    <h2 class="section-title">Why Choose ReviewFiber?</h2>
-    <p class="section-subtitle">We cut through the noise to bring you reviews that actually matter.</p>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🔍</div>
-        <h3>In-Depth Analysis</h3>
-        <p>We don't just skim the surface. Every review dives deep into features, performance, and real-world usage.</p>
+<!-- HERO BENTO GRID -->
+<div class="hero-bento">
+  <!-- Main Hero Card -->
+  <div class="bento-card bento-main">
+    <div>
+      <h1 class="bento-title">HONEST<br>REVIEWS!</h1>
+      <p class="bento-subtitle">Freshly researched insights,<br>made just for you</p>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div class="bento-rating">
+        <span class="rating-number">4.9</span>
+        <span>trusted<br>since 2024</span>
       </div>
+      <span class="bento-badge">500+ Reviews</span>
+    </div>
+  </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">⚖️</div>
-        <h3>Unbiased & Honest</h3>
-        <p>No sponsored content, no hidden agendas. Just straightforward, honest opinions you can trust.</p>
-      </div>
+  <!-- Top Right Card - Blue -->
+  <div class="bento-card bento-small bento-blue">
+    <h2 class="bento-card-title">GUIDES</h2>
+    <p class="bento-card-text">Learn to choose wisely</p>
+    <a href="{{ '/about/' | relative_url }}" class="bento-btn">EXPLORE →</a>
+  </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">🎯</div>
-        <h3>Expert Insights</h3>
-        <p>Our team brings years of experience to help you understand what really matters in each category.</p>
+  <!-- Bottom Right Card - Coral -->
+  <div class="bento-card bento-small bento-coral">
+    <h2 class="bento-card-title">LATEST</h2>
+    <p class="bento-card-text">Fresh reviews, delivered daily</p>
+    <span class="bento-badge" style="position: absolute; bottom: 1.5rem; right: 1.5rem;">NEW</span>
+  </div>
+</div>
+
+<!-- TOP PICKS SECTION -->
+<div class="section">
+  <div class="section-header">
+    <h2 class="section-title">TOP-5<br>PICKS</h2>
+  </div>
+
+  <div class="review-list">
+    <div class="review-item">
+      <div class="review-icon" style="background: #a8d8ea;">📱</div>
+      <div class="review-content">
+        <div class="review-title">Best Smartphones</div>
+        <div class="review-desc">Top picks for every budget range</div>
       </div>
+      <div class="review-rating">
+        <span class="rating-score">9.4/10</span>
+        <span class="rating-label">avg rating</span>
+      </div>
+      <div class="review-action">+</div>
+    </div>
+
+    <div class="review-item">
+      <div class="review-icon" style="background: #f4b183;">💻</div>
+      <div class="review-content">
+        <div class="review-title">Laptops for Work</div>
+        <div class="review-desc">Productivity machines tested</div>
+      </div>
+      <div class="review-rating">
+        <span class="rating-score">9.2/10</span>
+        <span class="rating-label">avg rating</span>
+      </div>
+      <div class="review-action">+</div>
+    </div>
+
+    <div class="review-item">
+      <div class="review-icon" style="background: #c8e6c9;">🎧</div>
+      <div class="review-content">
+        <div class="review-title">Wireless Earbuds</div>
+        <div class="review-desc">Sound quality meets comfort</div>
+      </div>
+      <div class="review-rating">
+        <span class="rating-score">8.9/10</span>
+        <span class="rating-label">avg rating</span>
+      </div>
+      <div class="review-action">+</div>
+    </div>
+
+    <div class="review-item">
+      <div class="review-icon" style="background: #e1bee7;">⌚</div>
+      <div class="review-content">
+        <div class="review-title">Smart Watches</div>
+        <div class="review-desc">Fitness tracking & more</div>
+      </div>
+      <div class="review-rating">
+        <span class="rating-score">8.7/10</span>
+        <span class="rating-label">avg rating</span>
+      </div>
+      <div class="review-action">+</div>
     </div>
   </div>
 </div>
 
-<div class="section section--gradient">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <span class="stat-number">500+</span>
-        <span class="stat-label">Reviews</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">50K+</span>
-        <span class="stat-label">Readers</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">100%</span>
-        <span class="stat-label">Independent</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">4.9★</span>
-        <span class="stat-label">Trust Rating</span>
-      </div>
+<!-- WHY US SECTION -->
+<div class="section">
+  <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Why ReviewFiber?</h2>
+
+  <div class="features-bento">
+    <div class="feature-card">
+      <div class="feature-icon icon-orange">🔍</div>
+      <h3>Deep Dives</h3>
+      <p>We don't skim. Every review explores features, real-world use, and hidden details.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon icon-blue">⚖️</div>
+      <h3>No BS</h3>
+      <p>Zero sponsored content. Just honest opinions you can actually trust.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon icon-green">🎯</div>
+      <h3>Expert Eyes</h3>
+      <p>Years of experience helping you understand what actually matters.</p>
     </div>
   </div>
 </div>
 
-<div class="section section--white">
-  <div class="container">
-    <h2 class="section-title">What Our Readers Say</h2>
-    <p class="section-subtitle">Join thousands who make better decisions with ReviewFiber.</p>
-
-    <div class="features-grid">
-      <div class="testimonial-card">
-        <p class="testimonial-text">"Finally, a review site that doesn't feel like a sales pitch. ReviewFiber helped me find the perfect laptop for my needs."</p>
-        <div class="testimonial-author">
-          <div class="author-info">
-            <div class="author-name">Sarah M.</div>
-            <div class="author-title">Software Developer</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-text">"The comparison guides are incredibly detailed. Saved me hours of research and helped me avoid a bad purchase."</p>
-        <div class="testimonial-author">
-          <div class="author-info">
-            <div class="author-name">James K.</div>
-            <div class="author-title">Small Business Owner</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-text">"I appreciate how they highlight both pros AND cons. It's refreshing to read genuinely balanced reviews."</p>
-        <div class="testimonial-author">
-          <div class="author-info">
-            <div class="author-name">Emily R.</div>
-            <div class="author-title">Content Creator</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section section--cream">
-  <div class="container" style="text-align: center;">
-    <h2 class="section-title">Ready to Make Better Decisions?</h2>
-    <p class="section-subtitle">Browse our latest reviews or explore categories to find exactly what you need.</p>
-    <p style="margin-top: 2rem;">
-      <a href="{{ '/reviews/' | relative_url }}" class="btn btn--primary btn--large">Browse Reviews</a>
-      <a href="{{ '/about/' | relative_url }}" class="btn btn--secondary btn--large" style="margin-left: 1rem;">Learn More</a>
-    </p>
-  </div>
+<!-- CTA SECTION -->
+<div class="cta-section">
+  <h2 class="cta-title">Ready to decide?</h2>
+  <p class="cta-text">Browse our latest reviews and find exactly what you need.</p>
+  <a href="{{ '/about/' | relative_url }}" class="cta-btn">Get Started →</a>
 </div>
