@@ -5,71 +5,331 @@
 @charset "utf-8";
 
 /* ==========================================================================
-   CUSTOM SKIN / VARIABLE OVERRIDES
-   Define these BEFORE importing the theme
+   REVIEWFIBER CUSTOM SKIN - Milky/Calm SaaS Theme
    ========================================================================== */
 
-/* Primary Colors */
-$primary-color: #6f42c1 !default;        /* Purple - change to your brand color */
-$link-color: #6f42c1 !default;
+/* Milky/Calm Color Palette */
+$cream: #faf9f7;
+$soft-white: #ffffff;
+$warm-gray: #6b7280;
+$charcoal: #1f2937;
+$soft-purple: #8b5cf6;
+$muted-lavender: #a78bfa;
+$pale-blue: #e0e7ff;
+$soft-rose: #fce7f3;
+$mint-cream: #ecfdf5;
 
-/* Background & Text */
-$background-color: #fff !default;
-$text-color: #333 !default;
-$border-color: #e5e5e5 !default;
+/* Theme Variables */
+$primary-color: $soft-purple;
+$secondary-color: $muted-lavender;
+$background-color: $cream;
+$text-color: $charcoal;
+$muted-text-color: $warm-gray;
+$link-color: $soft-purple;
+$border-color: #e5e7eb;
 
-/* Masthead / Header */
-$masthead-link-color: $text-color !default;
-$masthead-link-color-hover: $primary-color !default;
+/* Masthead */
+$masthead-link-color: $charcoal;
+$masthead-link-color-hover: $soft-purple;
+$masthead-background-color: $soft-white;
 
 /* Footer */
-$footer-background-color: #1a1a1a !default;
-
-/* Code Blocks */
-$code-background-color: #f5f5f5 !default;
-$code-background-color-dark: #263238 !default;
+$footer-background-color: $charcoal;
 
 /* Typography */
-// $serif: Georgia, Times, serif !default;
-// $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", sans-serif !default;
-// $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$global-font-family: $sans-serif;
 
-/* Font Sizes */
-// $type-size-1: 2.441em !default;
-// $type-size-2: 1.953em !default;
-// $type-size-3: 1.563em !default;
-
-/* Syntax Highlighting (options: base16-dark, base16-solarized-light, contrast, dark, dirt, dracula, neon, plum, sunrise) */
-// $base16-scheme: "dracula" !default;
-
-/* ==========================================================================
-   IMPORT MINIMAL MISTAKES THEME
-   ========================================================================== */
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+/* Import Theme */
+@import "minimal-mistakes/skins/default";
 @import "minimal-mistakes";
 
 /* ==========================================================================
-   CUSTOM CSS OVERRIDES
-   Add your custom styles AFTER importing the theme
+   CUSTOM SAAS STYLES
    ========================================================================== */
 
-/* Example: Custom homepage hero styling */
+/* Global */
+body {
+  background-color: $cream;
+}
+
+/* Masthead / Navigation */
+.masthead {
+  background: $soft-white;
+  border-bottom: 1px solid $border-color;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: $charcoal;
+}
+
+.greedy-nav a {
+  color: $warm-gray;
+  font-weight: 500;
+
+  &:hover {
+    color: $soft-purple;
+  }
+}
+
+/* Hero Section */
 .page__hero--overlay {
-  // background-image: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 20%) 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+
+  .page__title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
+  }
+
+  .page__lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.95;
+    max-width: 600px;
+  }
 }
 
-/* Example: Custom button styling */
+/* SaaS Feature Cards */
+.feature-card {
+  background: $soft-white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid $border-color;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $charcoal;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: $warm-gray;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+/* Section Styling */
+.section {
+  padding: 4rem 0;
+
+  &--white {
+    background: $soft-white;
+  }
+
+  &--cream {
+    background: $cream;
+  }
+
+  &--gradient {
+    background: linear-gradient(180deg, $pale-blue 0%, $cream 100%);
+  }
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: $charcoal;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: $warm-gray;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+/* CTA Buttons */
 .btn--primary {
-  // background-color: $primary-color;
-  // &:hover {
-  //   background-color: darken($primary-color, 10%);
-  // }
+  background: linear-gradient(135deg, $soft-purple 0%, $muted-lavender 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.35);
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+    background: linear-gradient(135deg, darken($soft-purple, 5%) 0%, darken($muted-lavender, 5%) 100%);
+  }
 }
 
-/* Example: Custom card/archive styling */
-.archive__item-title {
-  // font-weight: 600;
+.btn--secondary {
+  background: $soft-white;
+  border: 2px solid $border-color;
+  border-radius: 8px;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  color: $charcoal;
+
+  &:hover {
+    border-color: $soft-purple;
+    color: $soft-purple;
+  }
 }
 
-/* Add your custom styles below */
+/* Stats Section */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.stat-item {
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: $soft-purple;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: $warm-gray;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  background: $soft-white;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid $border-color;
+
+  .testimonial-text {
+    font-size: 1.1rem;
+    color: $charcoal;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+
+    .author-info {
+      .author-name {
+        font-weight: 600;
+        color: $charcoal;
+      }
+      .author-title {
+        font-size: 0.85rem;
+        color: $warm-gray;
+      }
+    }
+  }
+}
+
+/* Footer */
+.page__footer {
+  background: $charcoal;
+  color: rgba(255, 255, 255, 0.7);
+
+  a {
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover {
+      color: $muted-lavender;
+    }
+  }
+}
+
+/* Pill badges */
+.pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  &--purple {
+    background: rgba($soft-purple, 0.1);
+    color: $soft-purple;
+  }
+
+  &--green {
+    background: $mint-cream;
+    color: #059669;
+  }
+
+  &--pink {
+    background: $soft-rose;
+    color: #db2777;
+  }
+}
+
+/* Remove author profile for cleaner SaaS look */
+.page--wide .page__content {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* Custom container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide sidebar on homepage for full-width SaaS layout */
+.layout--home {
+  .sidebar {
+    display: none;
+  }
+
+  .page {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+}
