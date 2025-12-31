@@ -50,7 +50,9 @@ $display-font: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 /* ==========================================================================
    GOOGLE FONTS
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&family=Fredoka:wght@400;500;600;700&display=swap');
+
+$heading-font: "Fredoka", sans-serif;
 
 /* ==========================================================================
    GLOBAL STYLES
@@ -149,15 +151,16 @@ body {
 }
 
 .bento-title {
-  font-size: 4.5rem;
-  font-weight: 800;
+  font-family: $heading-font;
+  font-size: 5rem;
+  font-weight: 700;
   color: white;
   line-height: 0.95;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 
   @media (max-width: 600px) {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -202,10 +205,11 @@ body {
   background: $sky-blue;
 
   .bento-card-title {
-    font-size: 2rem;
-    font-weight: 800;
+    font-family: $heading-font;
+    font-size: 2.25rem;
+    font-weight: 600;
     color: $charcoal;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
 
   .bento-card-text {
@@ -219,10 +223,11 @@ body {
   background: $coral-orange;
 
   .bento-card-title {
-    font-size: 2rem;
-    font-weight: 800;
+    font-family: $heading-font;
+    font-size: 2.25rem;
+    font-weight: 600;
     color: white;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
 
   .bento-card-text {
@@ -275,10 +280,11 @@ body {
 }
 
 .section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-family: $heading-font;
+  font-size: 2.75rem;
+  font-weight: 600;
   color: $charcoal;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   line-height: 1;
   margin: 0;
 }
@@ -447,8 +453,9 @@ body {
   margin-right: auto;
 
   .cta-title {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-family: $heading-font;
+    font-size: 2.75rem;
+    font-weight: 600;
     color: white;
     margin-bottom: 1rem;
   }
